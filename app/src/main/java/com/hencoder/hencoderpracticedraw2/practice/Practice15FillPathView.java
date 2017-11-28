@@ -49,6 +49,7 @@ public class Practice15FillPathView extends View {
         paint.setStrokeWidth(0);
         // 第一处：获取 Path
         canvas.drawPath(path, paint);
+        paint.getFillPath(path,path1);
 
         canvas.save();
         canvas.translate(500, 0);
@@ -62,6 +63,8 @@ public class Practice15FillPathView extends View {
         canvas.drawPath(path, paint);
         canvas.restore();
 
+        paint.getFillPath(path,path2);
+
         canvas.save();
         canvas.translate(500, 200);
         canvas.drawPath(path2, pathPaint);
@@ -73,6 +76,8 @@ public class Practice15FillPathView extends View {
         // 第三处：Style 为 STROKE 并且线条宽度为 40 时的 Path
         canvas.drawPath(path, paint);
         canvas.restore();
+
+        paint.getFillPath(path,path3);
 
         canvas.save();
         canvas.translate(500, 400);
